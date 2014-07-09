@@ -100,6 +100,13 @@ $(document).ready(function(){
 			location.reload();
 		}
 
+		if (moveNumber === 9) {
+			$('h2').after('<button> Reset Board </button>');
+			$('button').click(function() {
+				location.reload();
+				});
+		};
+
 	});
 
 });
