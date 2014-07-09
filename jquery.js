@@ -3,6 +3,11 @@ $(document).ready(function(){
 	var moveNumber = 0;
 	window.board = [];	 
 
+	$('h3').after('<button> Reset Board </button>');
+		$('button').click(function() {
+			location.reload();
+		});
+
 	$('td').click(function(){
 
 		if (moveNumber % 2 === 0 && $(this).html() === '' && moveNumber < 9) {
@@ -11,11 +16,14 @@ $(document).ready(function(){
 
 				if ($(this).attr('id') === '0') {
 					board[0] = 'X'; 
-				}	else if ($(this).attr('id') === '1') {
+				}	
+				else if ($(this).attr('id') === '1') {
 					board[1] = 'X'; 
-				} else if ($(this).attr('id') === '2') {
+				} 
+				else if ($(this).attr('id') === '2') {
 					board[2] = 'X'; 
-				} else if ($(this).attr('id') === '3') {
+				} 
+				else if ($(this).attr('id') === '3') {
 					board[3] = 'X'; 
 				}
 				else if ($(this).attr('id') === '4') {
@@ -100,13 +108,16 @@ $(document).ready(function(){
 			location.reload();
 		}
 
-		if (moveNumber === 9) {
-			$('h2').after('<button> Reset Board </button>');
-			$('button').click(function() {
-				location.reload();
-				});
+
+		if (moveNumber % 2 == 0) {
+			$('#mover').html('X');
+		}
+		else {
+			$('#mover').html('O');
 		};
 
 	});
+
+
 
 });

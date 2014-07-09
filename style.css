@@ -1,5 +1,10 @@
+* {
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
 html {
-	background-color: gray;
+	background-color: white;
 }
 
 #board {
@@ -8,11 +13,12 @@ html {
 }
 
 table {
-	border: 2px solid black;
+	border: 2px solid lightblue;
 	height: 500px;
 	width: 500px;
 	margin: 0 auto;
 	table-layout: fixed;
+	border-radius: 10px;
 }
 
 td {
@@ -20,15 +26,24 @@ td {
 	background-color: lightblue;
 	width: 33.333333%;
 	height: 33.333333%;
-	text-align: center;
 	font-size: 80px;
 
 }
 
 td:hover {
 	cursor: pointer;
+	opacity: 0.8;
 }
 
-p {
-	padding: 0;
+button {
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 15px;
 }
+
+button:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
