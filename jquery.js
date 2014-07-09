@@ -1,13 +1,21 @@
 $(document).ready(function(){
 	var moveNumber = 0;
+	var board = [];
+
+	 
+
 
 	$('td').click(function(){
-		$(this).text('Hello');
-		$('#move-number').html(++moveNumber);
+
+		if (moveNumber % 2 === 0) {
+			$(this).text('X');
+		} else {
+			$(this).text('O');
+		};
+
+		if (moveNumber < 9) {
+			$('#move-number').html(++moveNumber);
+		};
 	});
 
-	// How to play Tic Tac Toe
-	// 1. X goes first, O goes second
-	// 2. Alternating moves
-	// 3. 
 });
