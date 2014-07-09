@@ -108,7 +108,6 @@ $(document).ready(function(){
 			location.reload();
 		}
 
-
 		if (moveNumber % 2 == 0) {
 			$('#mover').html('X');
 		}
