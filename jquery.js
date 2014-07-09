@@ -106,9 +106,9 @@ $(document).ready(function(){
 		else if (board[2] === board[4] && board[4] === board[6] && board[4] !== undefined) {
 			alert(board[2] + ' Wins!');
 			location.reload();
-		}
+		};
 
-		if (moveNumber % 2 == 0) {
+		if (moveNumber % 2 === 0) {
 			$('#mover').html('X');
 		}
 		else {
@@ -117,7 +117,8 @@ $(document).ready(function(){
 
 		if (moveNumber === 9) {
 		alert('You Tied');
-	}
+		location.reload();
+		};
 
 	});
 
