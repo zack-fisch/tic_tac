@@ -7,15 +7,15 @@ $(document).ready(function(){
 
 	$('td').click(function(){
 
-		if (moveNumber % 2 === 0) {
+		if (moveNumber % 2 === 0 && $(this).html() === '' && moveNumber < 9) {
 			$(this).text('X');
-		} else {
+			$('#move-number').html(++moveNumber);
+		} else if (moveNumber % 2 === 1 && $(this).html() === '' && moveNumber < 9){
 			$(this).text('O');
-		};
-
-		if (moveNumber < 9) {
 			$('#move-number').html(++moveNumber);
 		};
+
+	
 	});
 
 });
