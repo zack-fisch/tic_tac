@@ -115,6 +115,12 @@ $(document).ready(function(){
 			$('#mover').html('O');
 		};
 
+		if (moveNumber === 9) {
+		alert('You Tied');
+	}
+
 	});
+
+
 
 });
