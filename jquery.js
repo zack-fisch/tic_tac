@@ -14,65 +14,17 @@ $(document).ready(function(){
 				$(this).text('X');
 				$('#move-number').html(++moveNumber);
 
-				if ($(this).attr('id') === '0') {
-					board[0] = 'X'; 
-				}	
-				else if ($(this).attr('id') === '1') {
-					board[1] = 'X'; 
-				} 
-				else if ($(this).attr('id') === '2') {
-					board[2] = 'X'; 
-				} 
-				else if ($(this).attr('id') === '3') {
-					board[3] = 'X'; 
-				}
-				else if ($(this).attr('id') === '4') {
-					board[4] = 'X'; 
-				}
-				else if ($(this).attr('id') === '5') {
-					board[5] = 'X'; 
-				}
-				else if ($(this).attr('id') === '6') {
-					board[6] = 'X'; 
-				}
-				else if ($(this).attr('id') === '7') {
-					board[7] = 'X'; 
-				}
-				else {
-					board[8] = 'X'; 
-				}
+				var index = $(this).attr('id');
+				board[index] = 'X';
+
 
 		} else if (moveNumber % 2 === 1 && $(this).html() === '' && moveNumber < 9){
 				$(this).text('O');
 				$('#move-number').html(++moveNumber);
 
-				if ($(this).attr('id') === '0') {
-					board[0] = 'O'; 
-				}
-				else if ($(this).attr('id') === '1') {
-					board[1] = 'O'; 
-				}
-				else if ($(this).attr('id') === '2') {
-					board[2] = 'O'; 
-				}
-				else if ($(this).attr('id') === '3') {
-					board[3] = 'O'; 
-				}
-				else if ($(this).attr('id') === '4') {
-					board[4] = 'O'; 
-				}
-				else if ($(this).attr('id') === '5') {
-					board[5] = 'O'; 
-				}
-				else if ($(this).attr('id') === '6') {
-					board[6] = 'O'; 
-				}
-				else if ($(this).attr('id') === '7') {
-					board[7] = 'O'; 
-				}
-				else {
-					board[8] = 'O'; 
-				};
+				var index = $(this).attr('id');
+				board[index] = 'O';
+
 		};
 
 		if (board[0] === board[1] && board[1] === board[2] && board[1] !== undefined) {
